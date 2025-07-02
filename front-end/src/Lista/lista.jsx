@@ -6,25 +6,35 @@ function ListaCompras() {
   const [itens, setItens] = useState([]);
 
   const adicionarItem = () => {
-    //verifica se o campo de texto está vazio
     if (novoItem.trim() !== '') {
-      const item = {
-        nome: novoItem,
-        comprado: false
-      };
-      setItens([...itens, item]);
+      const novo = { nome: novoItem, quantidade: 1, comprado: false };
+      setItens([...itens, novo]);
       setNovoItem('');
     }
+  };
+
+  const incrementar = (index) => {
+    const novosItens = [...itens];
+    novosItens[index].quantidade += 1;
+    setItens(novosItens);
+  };
+
+  const decrementar = (index) => {
+    const novosItens = [...itens];
+    if (novosItens[index].quantidade > 0) {
+      novosItens[index].quantidade -= 1;
+      setItens(novosItens);
+    }
+  };
+
+  const removerItem = (index) => {
+    const novosItens = itens.filter((_, i) => i !== index);
+    setItens(novosItens);
   };
 
   const marcarComoComprado = (index) => {
     const novosItens = [...itens];
     novosItens[index].comprado = !novosItens[index].comprado;
-    setItens(novosItens);
-  };
-
-  const removerItem = (index) => {
-    const novosItens = itens.filter((_, i) => i !== index);
     setItens(novosItens);
   };
 
@@ -46,8 +56,11 @@ function ListaCompras() {
         {itens.map((item, index) => (
           <li key={index} className={item.comprado ? 'comprado' : ''}>
             <span onClick={() => marcarComoComprado(index)}>
-              {item.nome}
+            {item.nome}
             </span>
+            <button onClick={() => incrementar(index)}>+</button>
+            <button onClick={() => decrementar(index)}>-</button>
+            {item.quantidade}x
             <button onClick={() => removerItem(index)}>❌</button>
           </li>
         ))}
