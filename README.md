@@ -1,11 +1,14 @@
 # ListAndCook
 Este diretório contém o código-fonte da interface web do projeto **List&Cook**, uma aplicação para criar e compartilhar receitas.
-Próximos passos
 
-    Adicionar autenticação com JWT
+    Funcionalidades planejadas: 
 
-    Persistência de receitas via backend
+    Cadastro e login de usuários
 
-    Upload de imagens para receitas
+    Criação e edição de receitas
 
-    Implementar testes end-to-end
+    Lista de compras vinculada aos ingredientes
+
+    Favoritar receitas
+
+    Verificar quais ingredientes estão disponíveis no "estoque pessoal"
