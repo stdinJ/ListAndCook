@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './lista.css'
+import Header from '../Header/header';
+
 
 function ListaCompras() {
   const [novoItem, setNovoItem] = useState('');
@@ -39,7 +41,9 @@ function ListaCompras() {
   };
 
   return (
-    <div className="lista-container">
+         
+      <><Header /><div className="lista-container">
+
       <h2>Lista de Compras</h2>
 
       <div className="input-area">
@@ -47,8 +51,7 @@ function ListaCompras() {
           type="text"
           placeholder="Adicionar item..."
           value={novoItem}
-          onChange={(e) => setNovoItem(e.target.value)}
-        />
+          onChange={(e) => setNovoItem(e.target.value)} />
         <button onClick={adicionarItem}>Adicionar</button>
       </div>
 
@@ -56,7 +59,7 @@ function ListaCompras() {
         {itens.map((item, index) => (
           <li key={index} className={item.comprado ? 'comprado' : ''}>
             <span onClick={() => marcarComoComprado(index)}>
-            {item.nome}
+              {item.nome}
             </span>
             <button onClick={() => incrementar(index)}>+</button>
             <button onClick={() => decrementar(index)}>-</button>
@@ -65,7 +68,7 @@ function ListaCompras() {
           </li>
         ))}
       </ul>
-    </div>
+    </div></>
   );
 }
 

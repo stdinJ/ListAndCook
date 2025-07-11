@@ -1,0 +1,51 @@
+{
+  "titulo": "Bolo de Cenoura",
+  "descricao": "Um bolo de cenoura simples, fofinho e coberto com chocolate.",
+  "porcoes": 8,
+  "tempo_preparo": "45 minutos",
+  "dificuldade": "fácil",
+  "ingredientes": [
+    {
+      "quantidade": 3,
+      "unidade": "unidade",
+      "item": "cenoura"
+    },
+    {
+      "quantidade": 2,
+      "unidade": "xícaras",
+      "item": "açúcar"
+    },
+    {
+      "quantidade": 3,
+      "unidade": "unidade",
+      "item": "ovo"
+    },
+    {
+      "quantidade": 2,
+      "unidade": "xícaras",
+      "item": "farinha de trigo"
+    },
+    {
+      "quantidade": 1,
+      "unidade": "colher de sopa",
+      "item": "fermento em pó"
+    }
+  ],
+  "modo_de_preparo": [
+    "Preaqueça o forno a 180°C.",
+    "Bata no liquidificador a cenoura, os ovos e o óleo.",
+    "Adicione o açúcar e bata novamente.",
+    "Em uma tigela, misture a farinha e o conteúdo do liquidificador.",
+    "Adicione o fermento e misture delicadamente.",
+    "Despeje a massa em uma forma untada.",
+    "Asse por aproximadamente 40 minutos."
+  ],
+  "categoria": "sobremesa",
+  "autor": "Joana Silva",
+  "data_publicacao": "2025-07-10",
+  "tags": ["bolo", "cenoura", "chocolate", "fácil"],
+  "avaliacoes": {
+    "media": 4.8,
+    "total_avaliacoes": 120
+  }
+}
