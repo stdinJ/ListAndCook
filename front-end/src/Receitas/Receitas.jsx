@@ -9,9 +9,7 @@ function Receitas() {
     setData(receitaData);
   }, []);
 
-  if (!data) {
-    return <p>Carregando receita...</p>;
-  }
+
 
   return (
     <>
